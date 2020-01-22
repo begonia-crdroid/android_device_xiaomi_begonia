@@ -578,4 +578,10 @@
          the blur effect where it isn't worth the performance hit.
          As of Honeycomb, blurring is not supported anymore. -->
     <bool name="config_sf_slowBlur">false</bool>
+
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+    <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_smartChargingSuspendValue" translatable="false">1</string>
+    <string name="config_smartChargingResumeValue" translatable="false">0</string>
 </resources>

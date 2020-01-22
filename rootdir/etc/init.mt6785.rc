@@ -476,6 +476,9 @@ on boot
     chown system system /sys/kernel/thunderquake_engine/level
     chown 644 /sys/kernel/thunderquake_engine/level
 
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
     stop console
 
 on property:vold.decrypt=trigger_reset_main
