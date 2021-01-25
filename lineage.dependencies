@@ -34,5 +34,11 @@
     "target_path": "packages/apps/MtkFMRadio",
     "branch": "12.1",
     "remote": "github"
+  },
+  {
+    "repository" : "begonia-crdroid/android_packages_apps_ViPER4AndroidFX",
+    "target_path": "packages/apps/ViPER4AndroidFX",
+    "branch": "12.1",
+    "remote": "github"
   }
 ]
