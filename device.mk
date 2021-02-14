@@ -92,6 +92,10 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/device_features/begonia.xml:$(TARGET_COPY_OUT_VENDOR)/etc/device_features/begonia.xml
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
