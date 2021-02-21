@@ -432,13 +432,16 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# HIDL
 PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhidlbase \
-    libunwindstack.vendor
+    libunwindstack.vendor \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor
 
 # MTK Jars (for IMS)
 include vendor/xiaomi/begonia-ims/begonia-ims-vendor.mk
