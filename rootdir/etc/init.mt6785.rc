@@ -977,3 +977,8 @@ on property:persist.vendor.mtk_aurisys_framework_support=*
     # Fix VoIP apps call echo
     stop audioserver
     start audioserver
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
