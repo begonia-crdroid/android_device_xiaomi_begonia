@@ -15,6 +15,9 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service    u:object_r:hal_displayfeature_default_exec:s0
 /vendor/bin/hw/android\.hardware\.vibrator-service\.begonia             u:object_r:hal_vibrator_default_exec:s0
 
+# Haptic
+/sys/kernel/thunderquake_engine/level    u:object_r:sysfs_vibrator:s0
+
 # Mi Thermald
 /vendor/bin/mi_thermald       u:object_r:mi_thermald_exec:s0
 /data/vendor/thermal(/.*)?    u:object_r:thermal_data_file:s0

@@ -31,4 +31,12 @@
     <string name="clear_speaker_title">Очистка динамика</string>
     <string name="clear_speaker_summary">Проиграть 30-секундный звук для очистки динамика</string>
     <string name="clear_speaker_description">Запустите эту опцию 2-3 раза, если ваш динамик немного загрязнен. Установите звук медиа на максимум.\n\nЕсли динамик загрязнен сильно, запустите эту опцию 2-5 раз, встряхивая устройство динамиком вниз.\n\nВНИМАНИЕ: Убедитесь, что отключили любую гарнитуру.</string>
+
+     <!-- Haptic Level Settings -->
+     <string name="haptic_title">Контроль силы вибрации</string>
+     <string name="haptic_warning">Использование слишком высоких уровней вибрации может вызвать механическое повреждение, используйте на свой риск</string>
+     <string name="haptic_summary">Настройте интенсивность вибрации</string>
+     <string name="haptic_level_title">Уровень</string>
+     <string name="haptic_level_summary">Сила амплитуды вибрации</string>
+     <string name="haptic_level_summary_incompatible">Функция не поддерживается вашим ядром!</string>
 </resources>

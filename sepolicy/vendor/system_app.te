@@ -7,3 +7,7 @@ get_prop(system_app, mtk_default_prop)
 
 # Allow system app to read /proc/pagetypeinfo
 allow system_app proc_pagetypeinfo:file r_file_perms;
+
+# Allow vibrator to be adjusted by the system
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file rw_file_perms;
