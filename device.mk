@@ -151,7 +151,28 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
-    $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
+    $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_0b12.kl:system/usr/keylayout/Vendor_045e_Product_0b12.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02a1.kl:system/usr/keylayout/Vendor_045e_Product_02a1.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02d1.kl:system/usr/keylayout/Vendor_045e_Product_02d1.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02e0.kl:system/usr/keylayout/Vendor_045e_Product_02e0.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02e3.kl:system/usr/keylayout/Vendor_045e_Product_02e3.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02e6.kl:system/usr/keylayout/Vendor_045e_Product_02e6.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02ea.kl:system/usr/keylayout/Vendor_045e_Product_02ea.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_02fd.kl:system/usr/keylayout/Vendor_045e_Product_02fd.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_028f.kl:system/usr/keylayout/Vendor_045e_Product_028f.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_0291.kl:system/usr/keylayout/Vendor_045e_Product_0291.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_045e_Product_0719.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_054c_Product_0ce6.kl:system/usr/keylayout/Vendor_054c_Product_0ce6.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_054c_Product_05c4.kl:system/usr/keylayout/Vendor_054c_Product_05c4.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_054c_Product_09cc.kl:system/usr/keylayout/Vendor_054c_Product_09cc.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_057e_Product_2009.kl:system/usr/keylayout/Vendor_057e_Product_2009.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_0079_Product_0011.kl:system/usr/keylayout/Vendor_0079_Product_0011.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_146b_Product_0d01.kl:system/usr/keylayout/Vendor_146b_Product_0d01.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_0810_Product_0001.kl:system/usr/keylayout/Vendor_0810_Product_0001.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_1038_Product_1412.kl:system/usr/keylayout/Vendor_1038_Product_1412.kl
 
 # Iorapd
 PRODUCT_PROPERTY_OVERRIDES += \
