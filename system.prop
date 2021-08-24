@@ -124,3 +124,6 @@ ro.zygote.preload.enable=0
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
 ro.zram.periodic_wb_delay_hours=24
+
+# Disable blur on app launch
+ro.launcher.blur.appLaunch=0
