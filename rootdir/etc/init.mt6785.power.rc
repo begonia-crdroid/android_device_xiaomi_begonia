@@ -118,3 +118,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
+
+    # Report max frequency to unity tasks and miHoYo games
+    write /proc/sys/kernel/sched_lib_name "com.miHoYo.,UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
