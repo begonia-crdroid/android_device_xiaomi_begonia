@@ -449,7 +449,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_saturation=1.1 \
     persist.sys.sf.color_mode=9 \
     persist.sys.sf.native_mode=2
-
-# Zygote preforking
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true
