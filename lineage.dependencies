@@ -22,5 +22,11 @@
     "target_path": "vendor/xiaomi/begonia-ims",
     "branch": "12.1",
     "remote": "github"
+  },
+  {
+    "repository" : "begonia-crdroid/android_vendor_xiaomi_begonia-firmware",
+    "target_path": "vendor/xiaomi/begonia-firmware",
+    "branch": "12.1",
+    "remote": "github"
   }
 ]
