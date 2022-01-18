@@ -578,4 +578,8 @@
         <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
         <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
     </integer-array>
+
+    <!-- List of comma separated package names for which we the system will not show crash like
+         tts, etc. dialogs. -->
+    <string translatable="false" name="config_appsNotReportingCrashes">com.google.android.tts</string>
 </resources>
