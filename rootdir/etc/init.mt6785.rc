@@ -972,3 +972,8 @@ on boot
 
 on property:sys.boot_completed=1
     stop bootanim
+
+on property:persist.vendor.mtk_aurisys_framework_support=*
+    # Fix VoIP apps call echo
+    stop audioserver
+    start audioserver
