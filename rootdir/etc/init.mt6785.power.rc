@@ -87,5 +87,5 @@ on property:sys.boot_completed=1
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp -1
 
     # EAS/sched state
-    write /sys/devices/system/cpu/eas/enable 2
+    write /sys/devices/system/cpu/eas/enable 1
     write /proc/cpufreq/cpufreq_sched_disable 0
