@@ -66,8 +66,30 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor
 
 # Dex
+# Dex pre-opt
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
+WITH_DEXPREOPT_DEBUG_INFO := false
+
+# Don't build debug for host or device
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+
+# Recommend using the non debug dexpreopter
+USE_DEX2OAT_DEBUG := false
+
+# Dex pre-opt for speed
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    SystemUI \
+    Launcher3QuickStep \
+    SettingsInlelligence \
+    SettingsProvider \
+    Settings
 
 # Device features
 PRODUCT_COPY_FILES += \
