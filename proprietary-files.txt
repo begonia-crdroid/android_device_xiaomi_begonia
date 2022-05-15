@@ -1308,7 +1308,6 @@ vendor/data/misc/ProjectConfig.mk
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/apdb/APDB_MT6785_S01__W2041
 vendor/etc/apdb/APDB_MT6785_S01__W2041_ENUM
-vendor/etc/device_features/begonia.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_CT.xml

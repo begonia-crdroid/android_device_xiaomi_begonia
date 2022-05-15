@@ -69,6 +69,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# Device features
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/etc/device_features/begonia.xml:$(TARGET_COPY_OUT_VENDOR)/etc/device_features/begonia.xml
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \

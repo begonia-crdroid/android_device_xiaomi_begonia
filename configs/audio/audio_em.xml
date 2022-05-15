@@ -39,7 +39,7 @@
         <Option>Set_SpeechCall_DL_Mute=0</Option>
         <Option>SetFmVolume=0</Option>
         <Option>ANC_CMD=0</Option>
-        <Option>vendor.af.dumplog=1</Option>
+        <Option>vendor.af.dumplog=0</Option>
         <Option>LowLatencyDebugEnable=1</Option>
         <Option>DetectPulseEnable=1</Option>
     </SetParameters>
