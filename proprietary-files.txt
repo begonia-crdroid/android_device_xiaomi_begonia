@@ -696,6 +696,10 @@ vendor/firmware/soc3_0_ram_mcu_e1_hdr.bin
 vendor/firmware/txpowerctrl.cfg
 vendor/firmware/wifi.cfg
 
+# FM Radio
+vendor/etc/init/init.fmradio_drv.rc
+vendor/lib/modules/fmradio_drv.ko|37d6cb31915596cf9c30c03b8c341f800386fba6
+
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
 vendor/etc/init/android.hardware.gnss@2.1-service-mediatek.rc
@@ -1336,7 +1340,6 @@ vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
-vendor/etc/init/init.fmradio_drv.rc
 vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.md_apps.rc
 vendor/etc/init/init.mfp-daemon.rc
