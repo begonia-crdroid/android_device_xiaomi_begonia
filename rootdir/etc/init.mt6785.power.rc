@@ -1,21 +1,28 @@
+#
+# Booting time section
+#
+
 on early-init
+    # Cleanup boosting/ddr parameters
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
 
 on init
-    # add cpuset for big demand
-    mkdir /dev/cpuset/foreground/boost
-    write /dev/cpuset/foreground/boost/mems 0
+    # Set owner and perms for CPUSet (groups performance)
     chown system system /dev/cpuset/foreground/boost
     chown system system /dev/cpuset/foreground/boost/tasks
     chmod 0660 /dev/cpuset/foreground/boost/tasks
-    mkdir /dev/cpuset/top-app/boost
-    write /dev/cpuset/top-app/boost/mems 0
     chown system system /dev/cpuset/top-app/boost
     chown system system /dev/cpuset/top-app/boost/tasks
     chmod 0660 /dev/cpuset/top-app/boost/tasks
 
-    # update cpus for cpuset cgroup
+    # Setup boosting for top processes
+    mkdir /dev/cpuset/foreground/boost
+    write /dev/cpuset/foreground/boost/mems 0
+    mkdir /dev/cpuset/top-app/boost
+    write /dev/cpuset/top-app/boost/mems 0
+
+    # Tweak cpu usage for process groups
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 6-7
     write /dev/cpuset/background/cpus 0-3
@@ -24,7 +31,7 @@ on init
     write /dev/cpuset/top-app/boost/cpus 6-7
 
 on fs
-    # swap configuration
+    # Tuning swap
     write /sys/block/zram0/comp_algorithm lz4
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
@@ -32,7 +39,7 @@ on fs
     swapon_all /vendor/etc/fstab.mt6785
 
 on post-fs
-    # boot perf. tune
+    # Tuning EAS and sched
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
@@ -40,29 +47,7 @@ on post-fs
     write /proc/sys/kernel/sched_stune_task_threshold 0
 
 on post-fs-data
-    # boot time fs tune
+    # Tuning I/O
     write /sys/block/sdc/queue/iostats 0
     write /sys/block/sdc/queue/read_ahead_kb 2048
     write /sys/block/sdc/queue/nr_requests 256
-
-# start EAS+
-on property:sys.boot_completed=1
-    write /sys/devices/system/cpu/eas/enable 2
-    write /proc/cpufreq/cpufreq_sched_disable 0
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/rt/schedtune.prefer_idle
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.prefer_idle 0
-    write /dev/stune/rt/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.boost 1
-    write /proc/sys/kernel/sched_migration_cost_ns 200000
-
-    # restore perf. parameters
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 0"
-    write /proc/sys/kernel/sched_stune_task_threshold -1
-    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
-    write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp -1
