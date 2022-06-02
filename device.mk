@@ -255,6 +255,7 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6785.rc \
+    init.mt6785.power.rc \
     init.mt6785.usb.rc \
     init.safailnet.rc \
     init.project.rc \
