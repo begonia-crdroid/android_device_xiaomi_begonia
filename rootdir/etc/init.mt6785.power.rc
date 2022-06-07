@@ -62,3 +62,30 @@ on post-fs-data
     write /sys/block/sdc/queue/iostats 0
     write /sys/block/sdc/queue/read_ahead_kb 128
     write /sys/block/sdc/queue/nr_requests 256
+
+#
+# After boot section
+#
+
+on property:sys.boot_completed=1
+    # Change access for stune params
+    chown system system /dev/stune/foreground/schedtune.prefer_idle
+    chown system system /dev/stune/background/schedtune.prefer_idle
+    chown system system /dev/stune/system-background/schedtune.prefer_idle
+    chown system system /dev/stune/top-app/schedtune.prefer_idle
+    chown system system /dev/stune/rt/schedtune.prefer_idle
+    chown system system /dev/stune/camera-daemon/schedtune.prefer_idle
+    chown system system /dev/stune/audio-app/schedtune.prefer_idle
+
+    # Restore performance parameters
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 0"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 0"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 0"
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 0"
+    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
+    write /proc/sys/kernel/sched_stune_task_threshold -1
+    write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp -1
+
+    # EAS/sched state
+    write /sys/devices/system/cpu/eas/enable 2
+    write /proc/cpufreq/cpufreq_sched_disable 0
