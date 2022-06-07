@@ -53,6 +53,12 @@ on post-fs
 
 on post-fs-data
     # Tuning I/O
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sdb/queue/iostats 0
+    write /sys/block/sdb/queue/read_ahead_kb 128
+    write /sys/block/sdb/queue/nr_requests 256
     write /sys/block/sdc/queue/iostats 0
-    write /sys/block/sdc/queue/read_ahead_kb 2048
+    write /sys/block/sdc/queue/read_ahead_kb 128
     write /sys/block/sdc/queue/nr_requests 256
