@@ -122,3 +122,14 @@ on property:sys.boot_completed=1
     # Report max frequency to unity tasks and miHoYo games
     write /proc/sys/kernel/sched_lib_name "com.miHoYo.,UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
+
+    # Post-boot I/O tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 512
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sdb/queue/iostats 0
+    write /sys/block/sdb/queue/read_ahead_kb 512
+    write /sys/block/sdb/queue/nr_requests 128
+    write /sys/block/sdc/queue/iostats 0
+    write /sys/block/sdc/queue/read_ahead_kb 512
+    write /sys/block/sdc/queue/nr_requests 128
