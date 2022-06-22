@@ -5,3 +5,10 @@ dontaudit untrusted_app ashmem_device:chr_file open;
 # Neverallow: no domain should be allowed to ptrace init 
 # at system/sepolicy/public/init.te
 dontaudit crash_dump init:process ptrace;
+
+# Neverallow: hardware hals can't access default props
+dontaudit hal_light_default default_prop:file { read open getattr map };
+
+# Neverallow: hardware hals can't write /data root dir
+dontaudit hal_fingerprint_default system_data_root_file:dir write;
+dontaudit hal_fingerprint_default system_data_root_file:file write;
