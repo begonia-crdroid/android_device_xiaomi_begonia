@@ -12,3 +12,6 @@ dontaudit hal_light_default default_prop:file { read open getattr map };
 # Neverallow: hardware hals can't write /data root dir
 dontaudit hal_fingerprint_default system_data_root_file:dir write;
 dontaudit hal_fingerprint_default system_data_root_file:file write;
+
+# Neverallow: audioserver can't access vendor default props
+dontaudit audioserver vendor_default_prop:file { read open getattr map };
