@@ -88,6 +88,9 @@ persist.vendor.ims.disableQXDMLogs=1
 # Kernel
 ro.kernel.zio=38,108,105,16
 
+# LMK
+ro.config.low_ram=false
+
 # Netflix
 ro.netflix.bsp_rev=MTK6785-18758-1
 
