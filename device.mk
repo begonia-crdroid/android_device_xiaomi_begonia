@@ -172,7 +172,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/Vendor_0079_Product_0011.kl:system/usr/keylayout/Vendor_0079_Product_0011.kl \
     $(LOCAL_PATH)/configs/keylayout/Vendor_146b_Product_0d01.kl:system/usr/keylayout/Vendor_146b_Product_0d01.kl \
     $(LOCAL_PATH)/configs/keylayout/Vendor_0810_Product_0001.kl:system/usr/keylayout/Vendor_0810_Product_0001.kl \
-    $(LOCAL_PATH)/configs/keylayout/Vendor_1038_Product_1412.kl:system/usr/keylayout/Vendor_1038_Product_1412.kl
+    $(LOCAL_PATH)/configs/keylayout/Vendor_1038_Product_1412.kl:system/usr/keylayout/Vendor_1038_Product_1412.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_0e6f_Product_f501.kl:system/usr/keylayout/Vendor_0e6f_Product_f501.kl
 
 # Iorapd
 PRODUCT_PROPERTY_OVERRIDES += \
