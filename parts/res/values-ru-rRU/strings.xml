@@ -16,9 +16,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Ambient settings -->
-    <string name="ambient_enable">Индикация событий</string>
-
     <!-- Thermal profiles -->
     <string name="thermal_title">Профили оптимизации</string>
     <string name="thermal_summary">Настроить профиль оптимизации для каждого приложения</string>
@@ -29,10 +26,6 @@
     <string name="thermal_dialer">Телефон</string>
     <string name="thermal_gaming">Игра</string>
     <string name="thermal_streaming">Стриминг</string>
-
-    <!-- Raise to wake strings-->
-    <string name="raise_to_wake_gesture_title">Поднять для пробуждения</string>
-    <string name="raise_to_wake_gesture_summary">Включить устройство при поднятии, вместо уведомлений</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Очистка динамика</string>
