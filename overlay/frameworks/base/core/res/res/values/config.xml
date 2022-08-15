@@ -394,25 +394,6 @@
     <dimen name="rounded_corner_radius_bottom">90.0px</dimen>
     <dimen name="rounded_corner_radius">7.5dp</dimen>
 
-    <!-- Haptic -->
-    <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-
-    <integer-array name="config_keyboardTapVibePattern">
-        <item>35</item>
-    </integer-array>
-
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
