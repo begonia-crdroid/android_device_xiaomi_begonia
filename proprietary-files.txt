@@ -757,6 +757,14 @@ vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 
 # Mediatek
+lib64/extractors/libmtkadpcmextractor.so
+lib64/extractors/libmtkalacextractor.so
+lib64/extractors/libmtkapeextractor.so
+lib64/extractors/libmtkasfextractor.so
+lib64/extractors/libmtkaviextractor.so
+lib64/extractors/libmtkflvextractor.so
+lib64/extractors/libmtkmp3extractor.so
+lib64/extractors/libmtkmpeg2extractor.so
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
