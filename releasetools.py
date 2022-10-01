@@ -57,7 +57,6 @@ def Firmware_Images(info, incremental):
       'gz': ['gz1', 'gz2'],
       'lk': ['lk', 'lk2'],
       'md1img': ['md1img'],
-      'recovery': ['recovery'],
       'scp': ['scp1', 'scp2'],
       'spmfw': ['spmfw'],
       'sspm': ['sspm_1', 'sspm_2'],
@@ -105,5 +104,11 @@ def Firmware_Images(info, incremental):
       fw_cmd += 'package_extract_file("{}.bin", "/dev/block/bootdevice/by-name/{}");\n'.format(_bin, part)
   # END Flash Global Firmware
 
-  fw_cmd += ')\n);'
+  fw_cmd += ')\n);\n'
+
+  # Flash prebuilt recovery
+  fw_cmd += 'ui_print("Flashing prebuilt recovery...");\n'
+  AddImageOnly(info, 'twrp.img', incremental, True)
+  fw_cmd += 'package_extract_file("twrp.img", "/dev/block/bootdevice/by-name/recovery");'
+
   info.script.AppendExtra(fw_cmd)
