@@ -133,3 +133,8 @@ on property:sys.boot_completed=1
     write /sys/block/sdc/queue/iostats 0
     write /sys/block/sdc/queue/read_ahead_kb 512
     write /sys/block/sdc/queue/nr_requests 128
+
+    # TCP settings
+    write /proc/sys/net/ipv4/tcp_ecn 1
+    write /proc/sys/net/ipv4/tcp_fastopen 3
+    write /proc/sys/net/ipv4/tcp_syncookies 0
