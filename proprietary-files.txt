@@ -699,7 +699,6 @@ vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtksysutils.so
 vendor/lib64/libmtktinyxml.so
 vendor/lib64/libmtkutils.so
-vendor/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so|5dab262df4a0d7ecfb3070cefe414e5636e1199d
 vendor/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
 vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
@@ -1544,7 +1543,6 @@ vendor/lib/libaal_mtk.so
 vendor/lib/libaalservice.so
 vendor/lib/libaedv.so
 vendor/lib/libakm.so
-vendor/lib/libapusys.so|4f24acb4f990236a920d9d6e25aee6e8b732214a
 vendor/lib/libarmnn_ndk.mtk.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
@@ -1665,7 +1663,6 @@ vendor/lib/se_extn_client.so
 vendor/lib64/hw/dfps.mt6785.so
 vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/kmsetkey.beanpod.so
-vendor/lib64/APUWareApusysServer.so|5875e9d9d7daef70c16d5a85f2a21159d177d502
 vendor/lib64/APUWareUtilsServer.so
 vendor/lib64/APUWareXrpServer.so
 vendor/lib64/AVCSecureVdecCA.so
@@ -1714,12 +1711,11 @@ vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libalRnBRT_GL_GBWRAPPER.so
 vendor/lib64/libalhLDC.so
-vendor/lib64/libapu-apuwareapusys.mtk.so|4c10479daeb932f67ca6cd213ebe20421db061ed
 vendor/lib64/libapu-apuwareutils.mtk.so
 vendor/lib64/libapu-apuwarexrp.mtk.so
 vendor/lib64/libapu-frontend.so
 vendor/lib64/libapu-platform.so
-vendor/lib64/libapusys.so|89e70543b16c20547e2f91e122ff9d13be83108b
+vendor/lib64/libapusys.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.so
 vendor/lib64/libaurisysdemo.so
